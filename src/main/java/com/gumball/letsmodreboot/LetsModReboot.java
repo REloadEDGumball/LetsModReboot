@@ -1,6 +1,8 @@
 package com.gumball.letsmodreboot;
 
 import com.gumball.letsmodreboot.handler.ConfigurationHandler;
+import com.gumball.letsmodreboot.init.ModBlocks;
+import com.gumball.letsmodreboot.init.ModItems;
 import com.gumball.letsmodreboot.proxy.IProxy;
 import com.gumball.letsmodreboot.reference.Reference;
 import com.gumball.letsmodreboot.utility.LogHelper;
@@ -27,6 +29,10 @@ public class LetsModReboot
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete!");
+
+        ModItems.init();
+
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
