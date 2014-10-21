@@ -20,12 +20,13 @@ public class ConfigurationHandler
         if (configuration == null)
         {
             configuration = new Configuration(configFile);
+            loadConfiguration();
         }
 
     }
 
     @SubscribeEvent
-    public void onConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event)
+    public void OnConfigurationChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event)
     {
         if (event.modID.equalsIgnoreCase(Reference.MOD_ID))
         {
@@ -33,7 +34,7 @@ public class ConfigurationHandler
         }
     }
 
-     public void loadConfiguration()
+     private static void loadConfiguration()
      {
           testValue = configuration.getBoolean("configVlaue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
 
