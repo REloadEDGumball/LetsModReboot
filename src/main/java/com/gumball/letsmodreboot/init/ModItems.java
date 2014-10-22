@@ -2,6 +2,7 @@ package com.gumball.letsmodreboot.init;
 
 import com.gumball.letsmodreboot.item.ItemLMRB;
 import com.gumball.letsmodreboot.item.ItemMapleLeaf;
+import com.gumball.letsmodreboot.reference.Names;
 import com.gumball.letsmodreboot.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -12,6 +13,6 @@ public class ModItems
 
     public static void init()
     {
-        GameRegistry.registerItem(mapleLeaf, "mapleLeaf");
+        GameRegistry.registerItem(mapleLeaf, Names.Items.MAPLE_LEAF);
     }
 }
